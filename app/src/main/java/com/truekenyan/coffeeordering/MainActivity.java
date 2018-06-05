@@ -12,7 +12,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-//    @BindView(R.id.coffee_small)
+    @BindView(R.id.coffee_small)
     LinearLayout smallCoffee;
     LinearLayout mediumCoffee;
     LinearLayout largeCoffee;
@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        ButterKnife.bind(this);
+        ButterKnife.bind(this);
 
-        smallCoffee = findViewById(R.id.coffee_small);
+//        smallCoffee = findViewById(R.id.coffee_small);
         mediumCoffee = findViewById(R.id.coffee_medium);
         largeCoffee = findViewById(R.id.coffee_large);
         extraLargeCoffee = findViewById(R.id.coffee_extra_large);
