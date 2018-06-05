@@ -6,4 +6,9 @@
     <string name="soy">\t Soy</string>
     <string name="rice">\t Rice</string>
     <string name="coconut">\t Coconut</string>
+    <string name="milk_balance">Milk Balance</string>
+    <string name="next">NEXT</string>
+
+    <string name="milk_balance_value">%d%</string>
+    <string name="percent">%</string>
 </resources>

@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MilkTypeActivity" />
-        <activity android:name=".MilkBalanceActivity"></activity>
+        <activity android:name=".MilkBalanceActivity" />
+        <activity android:name=".FoamActivity" />
+        <activity android:name=".OrderSummaryActivity"></activity>
     </application>
 
 </manifest>
