@@ -17,4 +17,6 @@
     <color name="colorGoldText">#F6D282</color>
 
     <color name="colorWhiteMilk">#FFFFFF</color>
+
+    <color name="colorFoamBackGround">#512C4D</color>
 </resources>

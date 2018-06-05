@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">CoffeeOrdering</string>
     <string name="size">Size</string>
+    <string name="milk_type">Milk Type</string>
+    <string name="cow">\t Cow</string>
+    <string name="soy">\t Soy</string>
+    <string name="rice">\t Rice</string>
+    <string name="coconut">\t Coconut</string>
 </resources>

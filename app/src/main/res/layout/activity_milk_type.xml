@@ -1,9 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme"
     tools:context="com.truekenyan.coffeeordering.MilkTypeActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/top_panel"
+        android:background="@color/colorPrimary"
+        tools:ignore="UselessParent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/golden_text"
+            android:layout_gravity="bottom"
+            android:paddingStart="25dp"
+            android:paddingBottom="25dp"
+            android:paddingEnd="25dp"
+            android:textColor="@color/colorGoldText"
+            android:textSize="30sp"
+            android:text="@string/milk_type"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/item_cow"
+        android:background="@color/colorListOne"
+        android:drawableStart="@drawable/cow"
+        android:padding="20dp"
+        android:text="@string/cow"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhiteMilk"
+        android:drawableTint="@color/colorGoldText"
+        android:gravity="center_vertical"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/item_soy"
+        android:textStyle="bold"
+        android:background="@color/colorListTwo"
+        android:drawableStart="@drawable/soy"
+        android:padding="20dp"
+        android:text="@string/soy"
+        android:textColor="@color/colorWhiteMilk"
+        android:drawableTint="@color/colorGoldText"
+        android:gravity="center_vertical"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/item_rice"
+        android:background="@color/colorListThree"
+        android:drawableStart="@drawable/rice"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:text="@string/rice"
+        android:textColor="@color/colorWhiteMilk"
+        android:drawableTint="@color/colorGoldText"
+        android:gravity="center_vertical"/>
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:id="@+id/item_coconut"
+        android:background="@color/colorListFour"
+        android:drawableStart="@drawable/coconut"
+        android:padding="20dp"
+        android:text="@string/coconut"
+        android:textColor="@color/colorWhiteMilk"
+        android:drawableTint="@color/colorGoldText"
+        android:gravity="center_vertical"/>
+
+</LinearLayout>

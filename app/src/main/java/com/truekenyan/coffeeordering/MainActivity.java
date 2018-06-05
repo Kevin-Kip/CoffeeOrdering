@@ -10,8 +10,9 @@ import android.widget.LinearLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.coffee_small)
     LinearLayout smallCoffee;
@@ -45,15 +46,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mediumCoffee.setAnimation(mediumAnimation);
         largeCoffee.setAnimation(largeAnimation);
         extraLargeCoffee.setAnimation(extraLargeAnimation);
-
-        smallCoffee.setOnClickListener(this);
-        mediumCoffee.setOnClickListener(this);
-        largeCoffee.setOnClickListener(this);
-        extraLargeCoffee.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
+    @OnClick({R.id.coffee_small, R.id.coffee_medium, R.id.coffee_large, R.id.coffee_extra_large})
+    public void onViewClicked(View v) {
         int id = v.getId();
         switch (id){
             case R.id.coffee_small:
@@ -77,9 +73,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void startNextActivity(int amount){
+    private void startNextActivity(int price){
         Intent intent = new Intent(getApplicationContext(), MilkTypeActivity.class);
-        intent.putExtra("amount", amount);
+        intent.putExtra("price", price);
         startActivity(intent);
     }
 }
