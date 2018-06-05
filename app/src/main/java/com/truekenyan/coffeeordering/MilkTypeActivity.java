@@ -24,7 +24,7 @@ public class MilkTypeActivity extends AppCompatActivity {
 
     private int priceWithMilk = 0;
 
-    Intent i;
+    private Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
