@@ -73,6 +73,6 @@ public class MilkBalanceActivity extends AppCompatActivity {
 
     @NonNull
     private int getCurrentPrice(){
-        return currentPrice + (currentPrice * (int)selectedValue);
+        return currentPrice + (currentPrice * (int)(selectedValue/100));
     }
 }

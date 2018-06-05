@@ -11,4 +11,11 @@
 
     <string name="milk_balance_value">%d%</string>
     <string name="percent">%</string>
+    <string name="dollar">$</string>
+    <string name="foam">Foam</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="thanks">Thanks for your order!</string>
+    <string name="total">Total:</string>
+    <string name="order_again">Order again?</string>
+    <string name="your_order">Your order will be ready in \n 5 minutes</string>
 </resources>

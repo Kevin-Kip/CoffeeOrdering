@@ -1,9 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorFoamBackGround"
     tools:context="com.truekenyan.coffeeordering.OrderSummaryActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/top_panel"
+        android:background="@color/colorPrimary"
+        tools:ignore="UselessParent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/golden_text"
+            android:layout_gravity="bottom"
+            android:paddingStart="25dp"
+            android:paddingBottom="25dp"
+            android:paddingEnd="25dp"
+            android:textColor="@color/colorGoldText"
+            android:textSize="30sp"
+            android:text="@string/order_summary"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/thanks"
+        android:textColor="@color/colorGoldText"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Total: $25"
+        android:textColor="@color/colorGoldText"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:padding="15dp"
+        android:id="@+id/total_price"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Your order will be ready in \n 5 minutes"
+        android:textColor="@color/colorGoldText"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"
+        android:id="@+id/time"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/button_again"
+        android:background="@android:color/transparent"
+        android:text="@string/order_again"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhiteMilk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</LinearLayout>

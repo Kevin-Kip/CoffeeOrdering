@@ -77,5 +77,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MilkTypeActivity.class);
         intent.putExtra("price", price);
         startActivity(intent);
+//        finish();
     }
 }

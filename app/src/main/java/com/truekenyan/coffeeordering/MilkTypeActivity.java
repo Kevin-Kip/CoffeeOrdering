@@ -65,6 +65,7 @@ public class MilkTypeActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MilkBalanceActivity.class);
         intent.putExtra("price", price);
         startActivity(intent);
+        finish();
     }
 
     @Override

@@ -1,9 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
     tools:context="com.truekenyan.coffeeordering.FoamActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/top_panel"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/golden_text"
+            android:layout_gravity="bottom"
+            android:paddingStart="25dp"
+            android:paddingBottom="25dp"
+            android:paddingEnd="25dp"
+            android:textColor="@color/colorGoldText"
+            android:textSize="30sp"
+            android:text="@string/foam"/>
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@color/colorFoamBackGround">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/espresso_cup"
+            android:id="@+id/mug"
+            android:tint="@color/colorGoldText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/foam_level_adjust"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/foam_level"
+            tools:text="0%"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mug"
+            app:layout_constraintBottom_toTopOf="@id/foam_level_adjust"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/colorGoldText"
+            android:textSize="70sp"/>
+
+        <com.github.florent37.androidslidr.Slidr
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:slidr_step_drawLine="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:id="@+id/foam_level_adjust"
+            app:slidr_draw_bubble="false"
+            app:slidr_regions_centerText="false"
+            app:slidr_backgroundColor="@color/colorGoldText"
+            app:slidr_region_leftColor="@color/colorWhiteMilk"
+            app:slidr_indicator_inside="false"
+            app:slidr_regions_textFollowRegionColor="true"
+            app:slidr_textTop_size="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/button_next"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:id="@+id/button_next"
+            android:background="@android:color/transparent"
+            android:text="@string/next"
+            android:textColor="@color/colorWhiteMilk"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
