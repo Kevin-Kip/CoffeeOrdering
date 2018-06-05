@@ -63,6 +63,7 @@ public class MilkBalanceActivity extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), FoamActivity.class);
         i.putExtra("price", getCurrentPrice());
         startActivity(i);
+        finish();
     }
 
     @Override
