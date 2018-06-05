@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B64561</color>
+    <color name="colorPrimaryDark">#7c2b3f</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="coffeeColorOne">#9D4165</color>
+    <color name="coffeeColorTwo">#74375C</color>
+    <color name="coffeeColorThree">#512C51</color>
+    <color name="coffeeColorFour">#3B2041</color>
+    
+    <color name="colorListOne">#512851</color>
+    <color name="colorListTwo">#45204D</color>
+    <color name="colorListThree">#331A46</color>
+    <color name="colorListFour">#2E183F</color>
+
+    <color name="colorGoldText">#F6D282</color>
+
+    <color name="colorWhiteMilk">#FFFFFF</color>
+</resources>
