@@ -3,8 +3,8 @@
     <alpha android:fromAlpha="0"
         android:toAlpha="1"
         android:duration="200"/>
-    <scale android:pivotY="0%"
-        android:pivotX="50%"
+    <scale android:pivotY="50%"
+        android:pivotX="0%"
         android:fromYScale="1"
         android:toYScale="1"
         android:fromXScale="0.3"
