@@ -1,6 +1,9 @@
 package com.truekenyan.coffeeordering;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
@@ -33,12 +36,29 @@ public class MilkTypeActivity extends AppCompatActivity {
     Animation milkRice;
     Animation milkCoconut;
 
+    Drawable iconCow;
+    Drawable iconSoy;
+    Drawable iconRice;
+    Drawable iconCoconut;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_milk_type);
 
         ButterKnife.bind(this);
+
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1) {
+            iconCow = getResources().getDrawable(R.drawable.cow);
+            iconSoy = getResources().getDrawable(R.drawable.soy);
+            iconRice = getResources().getDrawable(R.drawable.rice);
+            iconCoconut = getResources().getDrawable(R.drawable.coconut);
+
+            iconCow.setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
+            iconSoy.setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
+            iconRice.setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
+            iconCoconut.setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
+        }
 
         i = getIntent();
         if (i != null) {
