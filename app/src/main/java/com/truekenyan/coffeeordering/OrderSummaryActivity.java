@@ -43,7 +43,7 @@ public class OrderSummaryActivity extends AppCompatActivity {
     @OnClick(R.id.button_again)
     public void onViewClicked() {
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
-        finish();
+//        finish();
     }
 
     @Override

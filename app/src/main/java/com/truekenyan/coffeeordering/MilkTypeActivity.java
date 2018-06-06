@@ -1,15 +1,13 @@
 package com.truekenyan.coffeeordering;
 
 import android.content.Intent;
-import android.graphics.PorterDuff;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -18,14 +16,14 @@ import butterknife.OnClick;
 
 public class MilkTypeActivity extends AppCompatActivity {
 
-    @BindView(R.id.item_cow)
-    TextView itemCow;
-    @BindView(R.id.item_soy)
-    TextView itemSoy;
-    @BindView(R.id.item_rice)
-    TextView itemRice;
-    @BindView(R.id.item_coconut)
-    AppCompatTextView itemCoconut;
+    @BindView(R.id.parent_cow)
+    LinearLayout parentCow;
+    @BindView(R.id.parent_soy)
+    LinearLayout parentSoy;
+    @BindView(R.id.parent_rice)
+    LinearLayout parentRice;
+    @BindView(R.id.parent_coconut)
+    LinearLayout parentCoconut;
 
     private int priceWithMilk = 0;
 
@@ -36,29 +34,12 @@ public class MilkTypeActivity extends AppCompatActivity {
     Animation milkRice;
     Animation milkCoconut;
 
-    Drawable[] iconCow;
-    Drawable[] iconSoy;
-    Drawable[] iconRice;
-    Drawable[] iconCoconut;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_milk_type);
 
         ButterKnife.bind(this);
-
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1) {
-            iconCow = itemCow.getCompoundDrawables();
-            iconSoy = itemSoy.getCompoundDrawables();
-            iconRice = itemRice.getCompoundDrawables();
-            iconCoconut = itemCoconut.getCompoundDrawables();
-
-            iconCow[0].setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
-            iconSoy[0].setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
-            iconRice[0].setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
-            iconCoconut[0].setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
-        }
 
         i = getIntent();
         if (i != null) {
@@ -70,28 +51,28 @@ public class MilkTypeActivity extends AppCompatActivity {
         milkRice = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_rice);
         milkCoconut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_coconut);
 
-        itemCow.setAnimation(milkCow);
-        itemSoy.setAnimation(milkSoy);
-        itemRice.setAnimation(milkRice);
-        itemCoconut.setAnimation(milkCoconut);
+        parentCow.setAnimation(milkCow);
+        parentSoy.setAnimation(milkSoy);
+        parentRice.setAnimation(milkRice);
+        parentCoconut.setAnimation(milkCoconut);
     }
 
-    @OnClick({R.id.item_cow, R.id.item_soy, R.id.item_rice, R.id.item_coconut})
+    @OnClick({R.id.parent_cow, R.id.parent_soy, R.id.parent_rice, R.id.parent_coconut})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.item_cow:
+            case R.id.parent_cow:
                 priceWithMilk += 1;
                 startNextActivity(priceWithMilk);
                 break;
-            case R.id.item_soy:
+            case R.id.parent_soy:
                 priceWithMilk += 2;
                 startNextActivity(priceWithMilk);
                 break;
-            case R.id.item_rice:
+            case R.id.parent_rice:
                 priceWithMilk += 3;
                 startNextActivity(priceWithMilk);
                 break;
-            case R.id.item_coconut:
+            case R.id.parent_coconut:
                 priceWithMilk += 4;
                 startNextActivity(priceWithMilk);
                 break;
@@ -102,7 +83,7 @@ public class MilkTypeActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MilkBalanceActivity.class);
         intent.putExtra("price", price);
         startActivity(intent);
-        finish();
+//        finish();
     }
 
     @Override

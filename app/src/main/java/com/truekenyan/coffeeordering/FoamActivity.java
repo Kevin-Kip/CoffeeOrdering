@@ -65,10 +65,9 @@ public class FoamActivity extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), OrderSummaryActivity.class);
         i.putExtra("price", getCurrentPrice());
         startActivity(i);
-        finish();
+//        finish();
     }
 
-    @NonNull
     private int getCurrentPrice(){
         return currentPrice + (currentPrice * (int)(selectedValue/100));
     }
