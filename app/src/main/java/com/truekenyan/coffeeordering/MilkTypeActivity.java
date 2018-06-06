@@ -15,13 +15,13 @@ import butterknife.OnClick;
 public class MilkTypeActivity extends AppCompatActivity {
 
     @BindView(R.id.parent_cow)
-    private LinearLayout parentCow;
+    LinearLayout parentCow;
     @BindView(R.id.parent_soy)
-    private LinearLayout parentSoy;
+    LinearLayout parentSoy;
     @BindView(R.id.parent_rice)
-    private LinearLayout parentRice;
+    LinearLayout parentRice;
     @BindView(R.id.parent_coconut)
-    private LinearLayout parentCoconut;
+    LinearLayout parentCoconut;
 
     private int priceWithMilk = 0;
 

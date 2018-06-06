@@ -18,9 +18,9 @@ public class FoamActivity extends AppCompatActivity {
     @BindView(R.id.mug)
     ImageView mug;
     @BindView(R.id.foam_level)
-    private TextView foamLevel;
+    TextView foamLevel;
     @BindView(R.id.foam_level_adjust)
-    private Slidr foamLevelAdjust;
+    Slidr foamLevelAdjust;
     @BindView(R.id.button_next)
     Button buttonNext;
 

@@ -15,13 +15,13 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.coffee_small)
-    private LinearLayout smallCoffee;
+    LinearLayout smallCoffee;
     @BindView(R.id.coffee_medium)
-    private LinearLayout mediumCoffee;
+    LinearLayout mediumCoffee;
     @BindView(R.id.coffee_large)
-    private LinearLayout largeCoffee;
+    LinearLayout largeCoffee;
     @BindView(R.id.coffee_extra_large)
-    private LinearLayout extraLargeCoffee;
+    LinearLayout extraLargeCoffee;
 
     private int cupSizePrice;
 

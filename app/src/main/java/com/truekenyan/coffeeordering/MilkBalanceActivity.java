@@ -15,9 +15,9 @@ import butterknife.OnClick;
 public class MilkBalanceActivity extends AppCompatActivity {
 
     @BindView(R.id.milk_balance)
-    private TextView milkBalance;
+    TextView milkBalance;
     @BindView(R.id.milk_balance_level)
-    private Slidr milkBalanceLevel;
+    Slidr milkBalanceLevel;
     @BindView(R.id.button_next)
     Button buttonNext;
 
