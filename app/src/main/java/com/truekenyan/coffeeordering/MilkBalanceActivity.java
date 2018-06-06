@@ -72,7 +72,6 @@ public class MilkBalanceActivity extends AppCompatActivity {
         intent.removeExtra("price");
     }
 
-    @NonNull
     private int getCurrentPrice(){
         return currentPrice + (currentPrice * (int)(selectedValue/100));
     }
