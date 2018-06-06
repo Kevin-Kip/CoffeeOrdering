@@ -3,12 +3,11 @@
     <alpha android:fromAlpha="0"
         android:toAlpha="1"
         android:duration="200"/>
-    <scale android:pivotX="0%"
-        android:pivotY="50%"
-        android:fromXScale="0.3"
-        android:toXScale="1"
+    <scale android:pivotY="0%"
+        android:pivotX="50%"
         android:fromYScale="1"
         android:toYScale="1"
+        android:fromXScale="0.3"
+        android:toXScale="1"
         android:duration="200"/>
-    <!--TODO fix this-->
 </set>
