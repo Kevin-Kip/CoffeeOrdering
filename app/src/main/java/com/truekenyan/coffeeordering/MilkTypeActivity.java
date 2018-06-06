@@ -36,10 +36,10 @@ public class MilkTypeActivity extends AppCompatActivity {
     Animation milkRice;
     Animation milkCoconut;
 
-    Drawable iconCow;
-    Drawable iconSoy;
-    Drawable iconRice;
-    Drawable iconCoconut;
+    Drawable[] iconCow;
+    Drawable[] iconSoy;
+    Drawable[] iconRice;
+    Drawable[] iconCoconut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,15 +49,15 @@ public class MilkTypeActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP_MR1) {
-            iconCow = getResources().getDrawable(R.drawable.cow);
-            iconSoy = getResources().getDrawable(R.drawable.soy);
-            iconRice = getResources().getDrawable(R.drawable.rice);
-            iconCoconut = getResources().getDrawable(R.drawable.coconut);
+            iconCow = itemCow.getCompoundDrawables();
+            iconSoy = itemSoy.getCompoundDrawables();
+            iconRice = itemRice.getCompoundDrawables();
+            iconCoconut = itemCoconut.getCompoundDrawables();
 
-            iconCow.setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
-            iconSoy.setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
-            iconRice.setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
-            iconCoconut.setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
+            iconCow[0].setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
+            iconSoy[0].setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
+            iconRice[0].setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
+            iconCoconut[0].setColorFilter(getResources().getColor(R.color.colorGoldText), PorterDuff.Mode.MULTIPLY);
         }
 
         i = getIntent();
