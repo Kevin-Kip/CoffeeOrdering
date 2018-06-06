@@ -18,4 +18,8 @@
     <string name="total">Total:</string>
     <string name="order_again">Order again?</string>
     <string name="your_order">Your order will be ready in \n 5 minutes</string>
+    <string name="xl">XL</string>
+    <string name="l">L</string>
+    <string name="m">M</string>
+    <string name="s">S</string>
 </resources>
