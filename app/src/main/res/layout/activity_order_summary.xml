@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorFoamBackGround"
-    tools:context="com.truekenyan.coffeeordering.OrderSummaryActivity">
+    tools:context="com.truekenyan.coffeeordering.OrderSummaryActivity"
+    tools:ignore="Overdraw">
 
     <LinearLayout
         android:layout_width="match_parent"

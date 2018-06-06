@@ -15,22 +15,17 @@ import butterknife.OnClick;
 public class MilkTypeActivity extends AppCompatActivity {
 
     @BindView(R.id.parent_cow)
-    LinearLayout parentCow;
+    private LinearLayout parentCow;
     @BindView(R.id.parent_soy)
-    LinearLayout parentSoy;
+    private LinearLayout parentSoy;
     @BindView(R.id.parent_rice)
-    LinearLayout parentRice;
+    private LinearLayout parentRice;
     @BindView(R.id.parent_coconut)
-    LinearLayout parentCoconut;
+    private LinearLayout parentCoconut;
 
     private int priceWithMilk = 0;
 
     private Intent i;
-
-    Animation milkCow;
-    Animation milkSoy;
-    Animation milkRice;
-    Animation milkCoconut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +39,10 @@ public class MilkTypeActivity extends AppCompatActivity {
             priceWithMilk = i.getIntExtra("price", priceWithMilk);
         }
 
-        milkCow = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_cow);
-        milkSoy = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_soy);
-        milkRice = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_rice);
-        milkCoconut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_coconut);
+        Animation milkCow = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_cow);
+        Animation milkSoy = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_soy);
+        Animation milkRice = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_rice);
+        Animation milkCoconut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_coconut);
 
         parentCow.setAnimation(milkCow);
         parentSoy.setAnimation(milkSoy);

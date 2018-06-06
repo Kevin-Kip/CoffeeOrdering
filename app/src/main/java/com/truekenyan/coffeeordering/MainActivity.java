@@ -15,20 +15,15 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.coffee_small)
-    LinearLayout smallCoffee;
+    private LinearLayout smallCoffee;
     @BindView(R.id.coffee_medium)
-    LinearLayout mediumCoffee;
+    private LinearLayout mediumCoffee;
     @BindView(R.id.coffee_large)
-    LinearLayout largeCoffee;
+    private LinearLayout largeCoffee;
     @BindView(R.id.coffee_extra_large)
-    LinearLayout extraLargeCoffee;
+    private LinearLayout extraLargeCoffee;
 
-    Animation smallAnimation;
-    Animation mediumAnimation;
-    Animation largeAnimation;
-    Animation extraLargeAnimation;
-
-    int cupSizePrice = 0;
+    private int cupSizePrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +32,12 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        smallAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.coffee_reveal_small);
-        mediumAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.coffee_reveal_medium);
-        largeAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.coffee_reveal_large);
-        extraLargeAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.coffee_reveal_extra_large);
+        cupSizePrice = 0;
+
+        Animation smallAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.coffee_reveal_small);
+        Animation mediumAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.coffee_reveal_medium);
+        Animation largeAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.coffee_reveal_large);
+        Animation extraLargeAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.coffee_reveal_extra_large);
 
         smallCoffee.setAnimation(smallAnimation);
         mediumCoffee.setAnimation(mediumAnimation);

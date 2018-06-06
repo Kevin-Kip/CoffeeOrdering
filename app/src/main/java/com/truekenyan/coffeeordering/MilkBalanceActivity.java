@@ -2,7 +2,6 @@ package com.truekenyan.coffeeordering;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,9 +15,9 @@ import butterknife.OnClick;
 public class MilkBalanceActivity extends AppCompatActivity {
 
     @BindView(R.id.milk_balance)
-    TextView milkBalance;
+    private TextView milkBalance;
     @BindView(R.id.milk_balance_level)
-    Slidr milkBalanceLevel;
+    private Slidr milkBalanceLevel;
     @BindView(R.id.button_next)
     Button buttonNext;
 

@@ -6,7 +6,8 @@
     android:orientation="vertical"
     android:theme="@style/AppTheme"
     android:background="@color/colorPrimary"
-    tools:context="com.truekenyan.coffeeordering.MilkTypeActivity">
+    tools:context="com.truekenyan.coffeeordering.MilkTypeActivity"
+    tools:ignore="Overdraw">
 
     <LinearLayout
         android:layout_width="match_parent"

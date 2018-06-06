@@ -13,11 +13,11 @@ import butterknife.OnClick;
 public class OrderSummaryActivity extends AppCompatActivity {
 
     @BindView(R.id.total_price)
-    TextView totalPrice;
+    private TextView totalPrice;
     @BindView(R.id.button_again)
     Button buttonAgain;
     @BindView(R.id.time)
-    TextView time;
+    private TextView time;
 
     private Intent intent;
 
