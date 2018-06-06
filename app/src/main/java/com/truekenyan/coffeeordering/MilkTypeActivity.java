@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -26,6 +28,11 @@ public class MilkTypeActivity extends AppCompatActivity {
 
     private Intent i;
 
+    Animation milkCow;
+    Animation milkSoy;
+    Animation milkRice;
+    Animation milkCoconut;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +44,16 @@ public class MilkTypeActivity extends AppCompatActivity {
         if (i != null) {
             priceWithMilk = i.getIntExtra("price", priceWithMilk);
         }
+
+        milkCow = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_cow);
+        milkSoy = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_soy);
+        milkRice = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_rice);
+        milkCoconut = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.milk_reveal_coconut);
+
+        itemCow.setAnimation(milkCow);
+        itemSoy.setAnimation(milkSoy);
+        itemRice.setAnimation(milkRice);
+        itemCoconut.setAnimation(milkCoconut);
     }
 
     @OnClick({R.id.item_cow, R.id.item_soy, R.id.item_rice, R.id.item_coconut})
