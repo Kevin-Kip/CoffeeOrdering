@@ -14,8 +14,10 @@ import butterknife.OnClick;
 
 public class MilkBalanceActivity extends AppCompatActivity {
 
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.milk_balance)
     TextView milkBalance;
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.milk_balance_level)
     Slidr milkBalanceLevel;
     @BindView(R.id.button_next)
@@ -62,7 +64,7 @@ public class MilkBalanceActivity extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), FoamActivity.class);
         i.putExtra("price", getCurrentPrice());
         startActivity(i);
-//        finish();
+        finish();
     }
 
     @Override

@@ -14,12 +14,16 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.coffee_small)
     LinearLayout smallCoffee;
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.coffee_medium)
     LinearLayout mediumCoffee;
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.coffee_large)
     LinearLayout largeCoffee;
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.coffee_extra_large)
     LinearLayout extraLargeCoffee;
 

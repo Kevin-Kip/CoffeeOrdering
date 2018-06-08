@@ -17,8 +17,10 @@ public class FoamActivity extends AppCompatActivity {
 
     @BindView(R.id.mug)
     ImageView mug;
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.foam_level)
     TextView foamLevel;
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.foam_level_adjust)
     Slidr foamLevelAdjust;
     @BindView(R.id.button_next)
@@ -64,7 +66,7 @@ public class FoamActivity extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), OrderSummaryActivity.class);
         i.putExtra("price", getCurrentPrice());
         startActivity(i);
-//        finish();
+        finish();
     }
 
     private int getCurrentPrice(){

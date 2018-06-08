@@ -14,12 +14,16 @@ import butterknife.OnClick;
 
 public class MilkTypeActivity extends AppCompatActivity {
 
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.parent_cow)
     LinearLayout parentCow;
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.parent_soy)
     LinearLayout parentSoy;
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.parent_rice)
     LinearLayout parentRice;
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.parent_coconut)
     LinearLayout parentCoconut;
 
@@ -76,7 +80,7 @@ public class MilkTypeActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MilkBalanceActivity.class);
         intent.putExtra("price", price);
         startActivity(intent);
-//        finish();
+        finish();
     }
 
     @Override

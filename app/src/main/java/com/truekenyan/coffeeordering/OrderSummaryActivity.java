@@ -12,10 +12,12 @@ import butterknife.OnClick;
 
 public class OrderSummaryActivity extends AppCompatActivity {
 
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.total_price)
     TextView totalPrice;
     @BindView(R.id.button_again)
     Button buttonAgain;
+    @SuppressWarnings("WeakerAccess")
     @BindView(R.id.time)
     TextView time;
 
@@ -43,7 +45,7 @@ public class OrderSummaryActivity extends AppCompatActivity {
     @OnClick(R.id.button_again)
     public void onViewClicked() {
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
-//        finish();
+        finish();
     }
 
     @Override
